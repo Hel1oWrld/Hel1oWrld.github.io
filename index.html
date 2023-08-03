@@ -23,8 +23,19 @@ generateCode();
     <br />
     <br />
     pastes:
-    <script scr="https://pastebin.com/dl/jnDyvPhw"></script><br />
     <script src="https://pastebin.com/embed_js/jnDyvPhw"></script><br />
-    <iframe src="https://pastebin.com/embed_iframe/jnDyvPhw" style="border:none;width:100%"></iframe>
+    <div id="hello"></div>
+    <script>
+      function whenReady(callback) {
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    callback();
+  } else {
+    document.addEventListener('DOMContentLoaded', callback);
+  }
+}
+whenReady(function() {
+  document.getElementById("hello").innerHTML=document.querySelector(".de1").innerHTML;
+});
+    </script>
   </body>
 </html>
